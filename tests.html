@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pruebas - El Ultimo Camino</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      padding: 1rem;
+    }
+
+    .test-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      background: rgba(11, 13, 16, 0.9);
+      padding: 1rem;
+    }
+
+    .test-pass {
+      color: #9fd49f;
+    }
+
+    .test-fail {
+      color: #f09a8d;
+    }
+
+    #app {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      width: 1280px;
+      min-height: 720px;
+    }
+  </style>
+</head>
+<body>
+  <section class="test-shell">
+    <p class="eyebrow">Diagnostico local</p>
+    <h1>Pruebas</h1>
+    <div id="test-output">Preparando pruebas...</div>
+  </section>
+  <main id="app" aria-hidden="true"></main>
+
+  <script>
+    localStorage.removeItem("elUltimoCamino.iteracion1");
+  </script>
+  <script src="data.js"></script>
+  <script src="audio.js"></script>
+  <script src="game.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
